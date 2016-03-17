@@ -5,45 +5,10 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-		<style>
-
-		textarea, .well{
-
-			margin-top: 20px;
-			margin-bottom: 20px
-		}
-
-		body{
-			padding: 20px
-		}
-
-		h1{
-			margin-bottom: 20px
-		}
-
-		</style>
-
+		<link rel="stylesheet" href="index.css">
 
 		<script src="https://cdn.jsdelivr.net/lodash/4.6.1/lodash.min.js"></script>
-		<script>
-			window.onload = function () {
-				var calculateButton = document.getElementById("calculate")
-
-				calculateButton.onclick = function(){
-
-					var firstList = document.getElementById("firstList").value.split(/\n|,/)
-					var secondList = document.getElementById("secondList").value.split(/\n|,/)
-
-					var duplicates = (_.intersection(firstList, secondList));
-
-					var answer = document.getElementById("answer")
-					answer.className = "well"
-
-					answer.innerHTML = duplicates.join("<br>")
-				}
-			}
-		</script>
+		<script src="index.js"></script>
 	</head>
 
 	<body>
