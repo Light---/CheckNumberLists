@@ -32,8 +32,8 @@
 
 				calculateButton.onclick = function(){
 
-					var firstList = document.getElementById("firstList").value.split("\n")
-					var secondList = document.getElementById("secondList").value.split("\n")
+					var firstList = document.getElementById("firstList").value.split(/\n|,/)
+					var secondList = document.getElementById("secondList").value.split(/\n|,/)
 
 					var duplicates = (_.intersection(firstList, secondList));
 
@@ -55,7 +55,6 @@
 		<textarea id="firstList" class="form-control" rows="3"></textarea>
 
 		<label for="labelSecond">Second Number List</label>
-
 
 		<textarea id="secondList" class="form-control" rows="3"></textarea>
 
